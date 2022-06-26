@@ -27,18 +27,20 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/, // See below to configure properly
+          omitKeys: ['xmlnsDc', 'xmlnsCc', 'xmlnsRdf', 'xmlnsSvg', 'xmlnsSodipodi', 'xmlnsInkscape']
+        }
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `./src/images/`,
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
-      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -63,6 +65,7 @@ const config: GatsbyConfig = {
       options: {
         fonts: [
           `Staatliches\:300,400,500,600,700,800`,
+          ` Roboto\:100`
         ],
         display: `swap`,
         attributes: {

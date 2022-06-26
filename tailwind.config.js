@@ -17,6 +17,9 @@ module.exports = {
           'Helvetica',
           'Arial',
           'sans-serf',
+        ],
+        body: [
+          'Roboto',
         ]
       }
     },

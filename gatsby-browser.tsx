@@ -1,5 +1,6 @@
 import { GatsbyBrowser } from "gatsby";
 import React from 'react';
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import Layout from './src/hoc/Layout';
 
@@ -10,6 +11,8 @@ export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
     props
 }) => (
     <Layout {...props}>
-        {element}
+        <ParallaxProvider>
+            {element}
+        </ParallaxProvider>
     </Layout>
 )
