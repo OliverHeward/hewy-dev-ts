@@ -18,6 +18,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@parcel/namer-default": "^2.6.2",
     "@react-three/drei": "^9.14.3",
     "@react-three/fiber": "^8.0.27",
     "@types/tailwindcss": "^3.0.10",
